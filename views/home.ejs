@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+    </title>
+    <link rel="icon" href="/Images/favicon.ico" type="image/x-icon"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/CSS/home.css" type="text/css">
+</head>
+<body>
+    <div class = "heading">
+    <h1>TO DO APP :)</h1>
+    </div>
+    <div class="description">
+    <p>DESCRIPTION</p>
+    <form class="form_structure">
+        <input type="text" name ="description" placeholder="What do you need to do?" required>
+    </form>
+    </div>
+    <div class="flex-area">
+    <div class="catagory">
+        <form class="form_structure">
+            <p>Choose a catagory</p>
+            <select name="dropdown">
+                <option value="home">Home</option>
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="none" selected>None</option>
+            </select>
+        </form>
+    </div>
+    <div class="duedate">
+        <form class="form_structure">
+            <input type="date" required>
+        </form>
+    </div>
+    </div>
+    <div class="button-class">
+        <div class="addbutton">
+            <button type="submit">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                Add Task
+            </button>
+        </div>
+        <div class="deletebutton">
+            <button type="submit">
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                Delete Tasks
+            </button>
+        </div>
+    </div>
+    <div class="list">
+        <ul class="list-ul">
+            <li class="list-li">
+                <div class="checkbox">
+                    <input type="checkbox" class="checkbox-icon">
+                </div>
+                <div class="task-data">
+                    <p>Task data</p>
+                    <i class="fa fa-calendar" aria-hidden="true">date</i>
+                </div>
+                <div class="task-catagory">
+                    <p>catagory</p>
+                </div>
+            </li>
+            <li class="list-li">
+                <div class="checkbox">
+                    <input type="checkbox" class="checkbox-icon">
+                </div>
+                <div class="task-data">
+                    <p>Task data</p>
+                    <i class="fa fa-calendar" aria-hidden="true">date</i>
+                </div>
+                <div class="task-catagory">
+                    <p>catagory</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="/JS/home.js"></script>
+</body>
+</html>

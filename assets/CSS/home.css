@@ -1,0 +1,107 @@
+body{
+    color: brown;
+}
+.heading{
+    text-align: center;
+    border-bottom: solid chocolate;
+}
+.description{
+    border-bottom: solid chocolate;
+}
+.flex-area{
+    display: flex;
+    position: relative;
+}
+.catagory{
+    border-bottom: solid chocolate;
+    border-right: solid chocolate;
+    text-align: left;
+    width: 50%;
+}
+.catagory p{
+    padding: 0%;
+    margin: 0%;
+}
+.form_structure input{
+    font-size: 20px;
+    border: none;
+    width: 100%;
+    margin: 2px;
+    padding: 5px;
+}
+.form_structure input:focus{
+    border: none;
+    background-color: rgb(233, 203, 203);
+}
+.form_structure select{
+    color: brown;
+    font-size: 15px;
+    border: none;
+    width: 100%;
+    padding: 0px;
+    height: 50%;
+}
+.duedate{
+    border-bottom: solid chocolate;
+    display: inline;
+    width: 50%;
+    height: 80%;
+}
+input[type="date"] {
+    color: brown;
+}
+.button-class{
+    border-bottom: solid chocolate;
+    display: flex;
+    height: 150px;
+}
+.addbutton{
+    width: 50%;
+    text-align: center;
+}
+.deletebutton{
+    width: 50%;
+    text-align: center;
+}
+.button-class button{
+    border: none;
+    margin: 10px;
+    font-size: 30px;
+    color: white;
+    height: 70%;
+    box-shadow: 0 5px #666;
+}
+.button-class button:active{
+    transform: translateY(4px);
+}
+.addbutton button{
+    background-color: grey;
+    width: 40%;
+}
+.addbutton button:hover{
+    background-color: rgb(44, 44, 44);
+}
+.deletebutton button{
+    background-color: rgb(248, 44, 44);
+    width: 40%;
+}
+.deletebutton button:hover{
+    background-color: rgb(165, 7, 7);
+}
+.list-li{
+    display: flex;
+    list-style: none;
+}
+.checkbox{
+    text-align: center;
+    width: 10%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+.checkbox-icon{
+    width:20px;
+    height: 20px;
+}
+.task-data{
+    width: 60%;
+}
