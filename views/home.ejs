@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>
-            <%= title %>
+            <%= locals.title %>
     </title>
     <link rel="icon" href="/Images/favicon.ico" type="image/x-icon"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,70 +13,82 @@
     </div>
     <div class="description">
     <p>DESCRIPTION</p>
-    <form class="form_structure">
+    <form class="form_structure" action="/create-contact" method="POST">
         <input type="text" name ="description" placeholder="What do you need to do?" required>
-    </form>
+
     </div>
     <div class="flex-area">
     <div class="catagory">
-        <form class="form_structure">
+        
             <p>Choose a catagory</p>
-            <select name="dropdown">
+            <select name="catagory">
                 <option value="home">Home</option>
                 <option value="work">Work</option>
                 <option value="personal">Personal</option>
                 <option value="none" selected>None</option>
             </select>
-        </form>
+        
     </div>
     <div class="duedate">
-        <form class="form_structure">
-            <input type="date" required>
-        </form>
+            <p>Date: </p>
+            <input type="date" name="duedate" required>
+      
     </div>
     </div>
     <div class="button-class">
         <div class="addbutton">
-            <button type="submit">
+            <button type="submit" formaction="/create-task" method="POST">
                 <i class="fa fa-plus" aria-hidden="true"></i>
                 Add Task
             </button>
         </div>
-        <div class="deletebutton">
-            <button type="submit">
+    </form>
+    
+        <!-- <div class="deletebutton">
+            <form>
+            <button type="submit" id = "delid" formaction="/delete-task?id=checkid.value" method="GET">
                 <i class="fa fa-trash-o" aria-hidden="true"></i>
                 Delete Tasks
             </button>
-        </div>
+            </form>
+        </div> -->
+        
     </div>
     <div class="list">
         <ul class="list-ul">
             <li class="list-li">
-                <div class="checkbox">
-                    <input type="checkbox" class="checkbox-icon">
-                </div>
                 <div class="task-data">
-                    <p>Task data</p>
+                    <p>To - Do - List</p>
                     <i class="fa fa-calendar" aria-hidden="true">date</i>
                 </div>
                 <div class="task-catagory">
-                    <p>catagory</p>
+                    <p>List - catagory</p>
                 </div>
             </li>
+            <% for (let i of task_list){ %>
             <li class="list-li">
-                <div class="checkbox">
-                    <input type="checkbox" class="checkbox-icon">
+                <!-- <div class="checkbox">
+                    <input type="checkbox" class="checkbox-icon" id="checkid" name="checktask" value="<%= i.description %>">
+                </div> -->
+                <div class = "delete-icon">
+                    <a href="/delete-task/?id=<%= i.id %>">
+                     <button class="delete-button">
+                        <i class="fa fa-trash-o fa-2x" aria-hidden="true"></i>
+                     </button> 
+                    </a>
                 </div>
                 <div class="task-data">
-                    <p>Task data</p>
-                    <i class="fa fa-calendar" aria-hidden="true">date</i>
+                    <p><%= i.description %></p>
+                    <i class="fa fa-calendar" aria-hidden="true"><%= i.duedate %></i>
                 </div>
                 <div class="task-catagory">
-                    <p>catagory</p>
+                    <p><%= i.catagory %></p>
                 </div>
             </li>
+            <% } %>
         </ul>
     </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type="text/javascript" src="/JS/home.js"></script>
 </body>
 </html>

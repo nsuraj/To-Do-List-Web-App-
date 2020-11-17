@@ -33,7 +33,7 @@ body{
     border: none;
     background-color: rgb(233, 203, 203);
 }
-.form_structure select{
+.catagory select{
     color: brown;
     font-size: 15px;
     border: none;
@@ -45,10 +45,15 @@ body{
     border-bottom: solid chocolate;
     display: inline;
     width: 50%;
-    height: 80%;
+    height: 100%;
+}
+.duedate p{
+    padding: 0%;
+    margin: 0%;
 }
 input[type="date"] {
     color: brown;
+    height: 80%;
 }
 .button-class{
     border-bottom: solid chocolate;
@@ -56,7 +61,7 @@ input[type="date"] {
     height: 150px;
 }
 .addbutton{
-    width: 50%;
+    width: 100%;
     text-align: center;
 }
 .deletebutton{
@@ -79,6 +84,7 @@ input[type="date"] {
     width: 40%;
 }
 .addbutton button:hover{
+    cursor: pointer;
     background-color: rgb(44, 44, 44);
 }
 .deletebutton button{
@@ -92,7 +98,7 @@ input[type="date"] {
     display: flex;
     list-style: none;
 }
-.checkbox{
+/* .checkbox{
     text-align: center;
     width: 10%;
     padding-top: 4%;
@@ -101,6 +107,29 @@ input[type="date"] {
 .checkbox-icon{
     width:20px;
     height: 20px;
+} */
+.delete-icon{
+    text-align: center;
+    width: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+} 
+.delete-button{
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+button.delete-button:hover{
+    cursor: pointer;
+}
+button.delete-button:active{
+    outline: none;
+}
+button.delete-button:active i{
+    color: chocolate;
+}
+.delete-button i{
+    color: brown;
 }
 .task-data{
     width: 60%;
